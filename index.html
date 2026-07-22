@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="个人履历、AI 探索作品集、已发布 skills 与网页 demo 汇总。"
+    />
+    <title>个人网站 | AI 探索与履历</title>
+    <link rel="stylesheet" href="styles.css?v=20260722-layout-3" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark">AI</span>
+        <span class="brand-text" data-field="siteTitle">个人网站</span>
+      </a>
+      <nav class="nav" aria-label="主要导航">
+        <a href="#profile">工作与学业</a>
+        <a href="#projects">AI 探索作品集</a>
+        <a href="#skills">Skills / Demo</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-field="eyebrow">Personal AI Lab</p>
+          <h1 id="hero-title" data-field="name">你的名字</h1>
+          <p class="hero-role" data-field="role">AI 探索者 / 产品与工程实践者</p>
+          <p class="hero-summary" data-field="summary">
+            这里用于展示个人履历、AI 项目实践、发布过的 skills 与网页 demo。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">查看项目</a>
+          </div>
+        </div>
+        <aside class="signal-panel" aria-label="站点概览">
+          <div>
+            <span class="metric-value" data-field="projectCount">0</span>
+            <span class="metric-label">AI 探索作品</span>
+          </div>
+          <div>
+            <span class="metric-value" data-field="skillCount">0</span>
+            <span class="metric-label">Skills / Demo</span>
+          </div>
+          <div>
+            <span class="metric-value" data-field="lastUpdated">待更新</span>
+            <span class="metric-label">最近更新</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="profile" class="section profile-section" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <p class="section-kicker">Profile</p>
+          <h2 id="profile-title">工作与学业履历</h2>
+        </div>
+        <div class="profile-grid">
+          <div class="bio-block">
+            <h3>简介</h3>
+            <p data-field="bio">
+              补充你的职业背景、擅长领域、正在关注的 AI 方向，以及希望访客快速理解的个人定位。
+            </p>
+          </div>
+          <div class="timeline" id="experience-list" aria-label="履历时间线"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-kicker">Projects</p>
+          <h2 id="projects-title">AI 探索作品集</h2>
+        </div>
+        <div class="card-grid" id="project-list"></div>
+      </section>
+
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="section-kicker">Skills & Web Demos</p>
+          <h2 id="skills-title">Skills 与 Demo</h2>
+        </div>
+        <div class="card-grid compact" id="skill-list"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span data-field="footerName">个人网站</span>
+      <span>Built as a small, editable AI portfolio.</span>
+    </footer>
+
+    <script src="content/site-data.js?v=20260722-12"></script>
+    <script src="app.js?v=20260722-12"></script>
+  </body>
+</html>
