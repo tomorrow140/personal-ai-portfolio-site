@@ -3,8 +3,8 @@ window.SITE_DATA = {
   name: "任思琳",
   role: "AI Builder / 商业化 AI 产品经理",
   eyebrow: "AI Native Product Portfolio",
-  summary: "9 年大厂产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
-  bio: "9 年大厂产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
+  summary: "9 年产品经验，近两年聚焦 AI 产品探索",
+  bio: "9 年产品经验，近两年聚焦 AI 产品探索",
   lastUpdated: "2026-07-23",
   experience: [
     {
