@@ -5,43 +5,14 @@ window.SITE_DATA = {
   eyebrow: "AI Native Product Portfolio",
   summary: "9 年产品经验，近两年聚焦 AIGC 创意与 AI Chatbot 产品落地。",
   bio:
-    "9 年产品经验，长期深耕本地商业、广告平台与商家经营场景。近两年从 0 到 1 负责 AIGC 创意生产和广告投放 AI Chatbot 落地，能够从业务判断、产品设计一路推进到规模化应用。",
+    "9 年大厂产品经验，长期深耕本地商业、广告平台与商家经营场景。近两年独立负责 AIGC 创意生产和广告投放 AI Chatbot 落地，能够从业务判断、产品设计一路推进到规模化应用。",
   lastUpdated: "2026-07-23",
   experience: [
     {
       period: "2013.09 - 2017.06",
       kind: "education",
-      title: "管理学学士 · 行政管理",
-      organization: "山东大学",
-      description: "统招本科。"
-    },
-    {
-      period: "2021.06 - 至今",
-      title: "经历概览",
-      organization: "美团",
-      department: "核心本地商业 · 商业增值部",
-      description:
-        "先后负责商家后台增值业务「应用市场」、广告平台预算、投放平台 AI Chatbot 和商业化 AIGC 产品。"
-    },
-    {
-      period: "2019.12 - 2021.03",
-      title: "商业化产品经理",
-      organization: "猫眼电影",
-      department: "电影票务事业部",
-      description: "负责影院商家后台与频道外流量拓展。"
-    },
-    {
-      period: "2018.05 - 2019.09",
-      title: "酒店商业化供应链产品经理",
-      organization: "马蜂窝旅行网",
-      description: "负责酒店供应链库存与静态信息维护，涉及 NLP 模型接入。"
-    },
-    {
-      period: "2017.07 - 2018.03",
-      title: "CRM 产品经理",
-      organization: "北京凯洛格管理咨询有限公司",
-      department: "总部销售策略部",
-      description: "负责 CRM 产品工作。"
+      title: "本科",
+      organization: "山东大学"
     }
   ],
   projects: [

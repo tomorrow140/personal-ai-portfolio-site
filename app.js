@@ -21,7 +21,7 @@ textFields.forEach((node) => {
   }
 });
 
-document.title = `${data.name || "个人网站"} | AI 探索与履历`;
+document.title = `${data.name || "个人网站"} | AI 探索与个人简介`;
 
 renderExperience(data.experience || []);
 renderProjects(data.projects || []);
@@ -121,7 +121,7 @@ function resumeItem(item) {
       <div>
         <h3>${escapeHtml(item.organization)}</h3>
         <p class="timeline-role">${escapeHtml(item.title)}</p>
-        <p>${escapeHtml(item.description)}</p>
+        ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
       </div>
     </article>
   `;
