@@ -284,11 +284,24 @@ h3 {
   font-size: 1.08rem;
 }
 
+.hero-channel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-channel strong {
+  color: var(--ink);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 
 .button {
@@ -349,7 +362,6 @@ h3 {
 
 .section {
   padding: 3.4rem 0;
-  border-top: 1px solid var(--line);
 }
 
 .section-heading {
@@ -357,8 +369,10 @@ h3 {
 }
 
 .profile-grid {
-  display: block;
-  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(380px, 1fr);
+  align-items: start;
+  gap: 2rem;
 }
 
 .project-card,
@@ -371,10 +385,10 @@ h3 {
 
 .bio-block {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  gap: 1.5rem;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0;
 }
 
 .bio-block h3 {
@@ -383,23 +397,23 @@ h3 {
 }
 
 .bio-block p {
-  max-width: 800px;
+  max-width: none;
   margin: 0;
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.96rem;
+  line-height: 1.65;
 }
 
 .timeline {
-  display: grid;
+  display: block;
 }
 
 .resume-group {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  gap: 1.5rem;
-  padding: 1.35rem 0;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0;
 }
 
 .resume-group-label {
@@ -464,7 +478,7 @@ h3 {
 
 .timeline-main {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: baseline;
   gap: 0.45rem 1rem;
 }
@@ -802,6 +816,7 @@ h3 {
   }
 
   .hero,
+  .profile-grid,
   .update-layout,
   .review-grid {
     grid-template-columns: 1fr;
@@ -820,6 +835,10 @@ h3 {
   .resume-group {
     grid-template-columns: 7rem minmax(0, 1fr);
     gap: 1.25rem;
+  }
+
+  .profile-grid {
+    gap: 1rem;
   }
 }
 
