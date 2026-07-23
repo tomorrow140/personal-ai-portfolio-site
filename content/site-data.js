@@ -23,6 +23,11 @@ window.SITE_DATA = {
       description:
         "将飞书文档富文本转换为微信公众号后台稳定识别的内联样式 HTML，并提供实时预览与多套排版风格。",
       tags: ["内容排版", "飞书", "微信公众号"],
+      imageUrl:
+        "https://tomorrow140.github.io/personal-ai-portfolio-site/assets/feishu-wechat-formatter-preview.png",
+      imageAlt: "飞书转公众号排版工具的真实产品界面截图",
+      imageWidth: 1672,
+      imageHeight: 941,
       demoUrl: "https://tomorrow140.github.io/feishu-wechat-formatter/",
       sourceUrl: "https://github.com/tomorrow140/feishu-wechat-formatter"
     },
@@ -36,6 +41,8 @@ window.SITE_DATA = {
       imageUrl:
         "https://tomorrow140.github.io/personal-ai-portfolio-site/assets/tech-article-infographic-example.png",
       imageAlt: "技术文章生图 Skill 生成的 Loop 工作机制中文手绘信息图",
+      imageWidth: 1536,
+      imageHeight: 1024,
       installCommands: [
         { label: "Codex", command: "./install.sh --target codex" },
         {

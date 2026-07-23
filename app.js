@@ -160,11 +160,13 @@ function emptyState(message) {
   `;
 }
 
-function projectCard(item) {
+function projectCard(item, index) {
   const tags = [item.status, item.type, ...(item.tags || [])].filter(Boolean);
-  const cardClass = item.imageUrl ? "project-card project-card--featured" : "project-card";
+  const cardClasses = ["project-card"];
+  if (item.imageUrl) cardClasses.push("project-card--featured");
+  if (index === 0 && item.imageUrl) cardClasses.push("project-card--primary");
   return `
-    <article class="${cardClass}">
+    <article class="${cardClasses.join(" ")}">
       ${renderProjectMedia(item)}
       <div class="project-card-content">
         <div class="project-card-top">
@@ -224,8 +226,8 @@ function renderProjectMedia(item) {
       <img
         src="${escapeAttribute(item.imageUrl)}"
         alt="${escapeAttribute(item.imageAlt || item.title)}"
-        width="1536"
-        height="1024"
+        width="${item.imageWidth || 1536}"
+        height="${item.imageHeight || 1024}"
         loading="eager"
       />
     </figure>

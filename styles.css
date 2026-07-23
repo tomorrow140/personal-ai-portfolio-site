@@ -691,6 +691,11 @@ h3 {
     grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.85fr);
   }
 
+  .project-card--primary {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.65fr);
+  }
+
   .project-media {
     border-right: 1px solid var(--line);
     border-bottom: 0;
