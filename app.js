@@ -181,11 +181,12 @@ function emptyState(message) {
 
 function projectCard(item, index) {
   const tags = [item.status, ...(item.tags || [])].filter(Boolean);
-  const cardClasses = ["project-card", "project-card--featured"];
+  const cardClasses = ["project-card", "project-card--wide"];
+  if (item.imageUrl) cardClasses.push("project-card--featured");
   if (item.mediaVariant === "compact") cardClasses.push("project-card--compact-media");
   return `
     <article class="${cardClasses.join(" ")}">
-      ${renderProjectMedia(item, index)}
+      ${renderProjectMedia(item)}
       <div class="project-card-content">
         <div class="project-identity">
           <div class="project-kind">
@@ -247,20 +248,8 @@ function renderProjectMetrics(item) {
   `;
 }
 
-function renderProjectMedia(item, index) {
-  if (!item.imageUrl) {
-    return `
-      <div class="project-media project-media--placeholder" aria-hidden="true">
-        <span class="project-visual-index">${String(index + 1).padStart(2, "0")}</span>
-        ${
-          item.iconUrl
-            ? `<img class="project-visual-icon" src="${escapeAttribute(item.iconUrl)}" alt="" width="128" height="128" loading="eager" />`
-            : ""
-        }
-        <strong>${escapeHtml(item.type)}</strong>
-      </div>
-    `;
-  }
+function renderProjectMedia(item) {
+  if (!item.imageUrl) return "";
 
   return `
     <figure class="project-media">

@@ -523,6 +523,11 @@ h3 {
   overflow: hidden;
 }
 
+.project-card--wide {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
 .project-card--featured .project-card-content {
   padding: 1.15rem;
 }
@@ -611,37 +616,6 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.project-media--placeholder {
-  display: grid;
-  min-height: 15rem;
-  align-content: center;
-  justify-items: center;
-  gap: 0.7rem;
-  padding: 2rem;
-  background: #f2f6f4;
-  color: var(--accent-strong);
-  text-align: center;
-}
-
-.project-visual-index {
-  font-family: "Songti SC", "STSong", Georgia, serif;
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.project-media--placeholder strong {
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-}
-
-.project-media--placeholder .project-visual-icon {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 8px;
-  box-shadow: 0 10px 24px rgba(20, 36, 31, 0.12);
 }
 
 .project-card--compact-media .project-media {
@@ -765,7 +739,6 @@ h3 {
 
 @media (min-width: 720px) {
   .project-card--featured {
-    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(22rem, 0.75fr);
   }
