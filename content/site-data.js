@@ -33,7 +33,8 @@ window.SITE_DATA = {
       description:
         "将技术文章、框架对比和 Agent / AI 概念转换为中文手绘解释图的通用 Prompt Pack，可用于 Codex、Claude Code、OpenClaw 及其他支持自定义技能或提示词的 Agent。",
       tags: ["信息图", "Prompt", "Agent 通用"],
-      imageUrl: "assets/tech-article-infographic-example.png",
+      imageUrl:
+        "https://tomorrow140.github.io/personal-ai-portfolio-site/assets/tech-article-infographic-example.png",
       imageAlt: "技术文章生图 Skill 生成的 Loop 工作机制中文手绘信息图",
       installCommands: [
         { label: "Codex", command: "./install.sh --target codex" },
@@ -52,7 +53,8 @@ window.SITE_DATA = {
       description:
         "自动识别并阻止重复标签页，同时支持不活跃标签清理、标签统计和常用网站分析。",
       tags: ["标签管理", "效率工具"],
-      iconUrl: "assets/chrome-tab-deduplicator-icon.png",
+      iconUrl:
+        "https://tomorrow140.github.io/personal-ai-portfolio-site/assets/chrome-tab-deduplicator-icon.png",
       iconAlt: "Chrome 标签去重助手插件图标",
       metrics: [
         { value: "700+", label: "累计用户" },

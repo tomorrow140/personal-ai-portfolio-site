@@ -192,7 +192,7 @@ function renderProjectIcon(item) {
         alt="${escapeAttribute(item.iconAlt || `${item.title}图标`)}"
         width="128"
         height="128"
-        loading="lazy"
+        loading="eager"
       />
     </span>
   `;
@@ -227,7 +227,7 @@ function renderProjectMedia(item) {
         alt="${escapeAttribute(item.imageAlt || item.title)}"
         width="1536"
         height="1024"
-        loading="lazy"
+        loading="eager"
       />
     </figure>
   `;
