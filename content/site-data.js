@@ -5,7 +5,6 @@ window.SITE_DATA = {
   eyebrow: "AI Native Product Portfolio",
   summary: "9 年大厂产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
   bio: "9 年大厂产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
-  wechatAccount: "00的记忆碎片",
   lastUpdated: "2026-07-23",
   experience: [
     {
@@ -99,7 +98,26 @@ window.SITE_DATA = {
       builtWith: "Cursor + Claude 3.7",
       description: "围绕祝福主题搭建的微信小程序。",
       tags: ["Vibe Coding"],
+      imageUrl:
+        "https://tomorrow140.github.io/personal-ai-portfolio-site/assets/blessing-planet-mini-program-code.jpg",
+      imageAlt: "祝福星球微信小程序码",
+      imageWidth: 656,
+      imageHeight: 616,
       demoUrl: "",
+      sourceUrl: ""
+    },
+    {
+      title: "00的记忆碎片",
+      status: "持续更新",
+      type: "AI 自媒体公众号",
+      year: "持续更新",
+      builtWith: "深度内容创作",
+      description:
+        "记录 AI 产品、Agent 实践与独立探索，通过深度文章分享真实项目中的方法、判断与思考。",
+      tags: ["AI 产品", "Agent 实践", "深度文章"],
+      demoLabel: "阅读深度文章",
+      demoUrl:
+        "https://mp.weixin.qq.com/s/FeoJNoOfriyLEmkvfb6GaQ?scene=1&click_id=1",
       sourceUrl: ""
     }
   ],
