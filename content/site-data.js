@@ -20,6 +20,8 @@ window.SITE_DATA = {
       title: "飞书转公众号排版工具",
       status: "已发布",
       type: "前端网页",
+      year: "2026",
+      builtWith: "Codex + GPT-5.6",
       description:
         "将飞书文档富文本转换为微信公众号后台稳定识别的内联样式 HTML，并提供实时预览与多套排版风格。",
       tags: ["内容排版", "飞书", "微信公众号"],
@@ -35,6 +37,8 @@ window.SITE_DATA = {
       title: "技术文章生图 Skill",
       status: "已发布",
       type: "Agent Skill",
+      year: "2026",
+      builtWith: "Codex + GPT-5.5",
       description:
         "将技术文章、框架对比和 Agent / AI 概念转换为中文手绘解释图的通用 Prompt Pack，可用于 Codex、Claude Code、OpenClaw 及其他支持自定义技能或提示词的 Agent。",
       tags: ["信息图", "Prompt", "Agent 通用"],
@@ -54,9 +58,24 @@ window.SITE_DATA = {
       sourceUrl: "https://github.com/tomorrow140/tech-article-infographic-skill"
     },
     {
+      title: "商业热点选题网站",
+      status: "持续更新",
+      type: "信息检索网站",
+      year: "2026",
+      builtWith: "Codex + GPT-5.4",
+      description:
+        "帮助 30 万+ 粉丝的自媒体博主搭建商业热点选题网站，通过自动化采集和 AI 分析生成每周热点与选题价值判断。",
+      tags: ["商业信息", "AI 分析", "GitHub Actions"],
+      demoUrl:
+        "https://tomorrow140.github.io/xiaohu-business-hotspots/insights/weekly-hotspots.html?v=check-20260722",
+      sourceUrl: "https://github.com/tomorrow140/xiaohu-business-hotspots"
+    },
+    {
       title: "Chrome 标签去重助手",
       status: "已上线",
       type: "Chrome 插件",
+      year: "2025",
+      builtWith: "Cursor + Claude",
       description:
         "自动识别并阻止重复标签页，同时支持不活跃标签清理、标签统计和常用网站分析。",
       tags: ["标签管理", "效率工具"],
@@ -76,21 +95,12 @@ window.SITE_DATA = {
       title: "祝福星球",
       status: "已上线",
       type: "微信小程序",
+      year: "2024",
+      builtWith: "Cursor + Claude 3.7",
       description: "围绕祝福主题搭建的微信小程序。",
       tags: ["Vibe Coding"],
       demoUrl: "",
       sourceUrl: ""
-    },
-    {
-      title: "商业热点选题网站",
-      status: "持续更新",
-      type: "信息检索网站",
-      description:
-        "帮助 30 万+ 粉丝的自媒体博主搭建商业热点选题网站，通过自动化采集和 AI 分析生成每周热点与选题价值判断。",
-      tags: ["商业信息", "AI 分析", "GitHub Actions"],
-      demoUrl:
-        "https://tomorrow140.github.io/xiaohu-business-hotspots/insights/weekly-hotspots.html?v=check-20260722",
-      sourceUrl: "https://github.com/tomorrow140/xiaohu-business-hotspots"
     }
   ],
   skills: [],

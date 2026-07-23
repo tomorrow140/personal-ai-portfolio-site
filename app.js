@@ -170,8 +170,15 @@ function projectCard(item, index) {
       ${renderProjectMedia(item)}
       <div class="project-card-content">
         <div class="project-identity">
-          <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
-          <span class="project-type">${escapeHtml(item.type)}</span>
+          <div class="project-kind">
+            <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+            <span class="project-type">${escapeHtml(item.type)}</span>
+          </div>
+          <div class="project-build">
+            <span class="project-year">${escapeHtml(item.year)}</span>
+            <span aria-hidden="true">·</span>
+            <span>${escapeHtml(item.builtWith)}</span>
+          </div>
         </div>
         <div class="project-title-row">
           ${renderProjectIcon(item)}
