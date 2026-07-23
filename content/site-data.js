@@ -82,11 +82,11 @@ window.SITE_DATA = {
       sourceUrl: ""
     },
     {
-      title: "小胡聊商业｜每周商业热点雷达",
+      title: "商业热点选题网站",
       status: "持续更新",
       type: "Web App",
       description:
-        "聚合商业媒体与 RSS 信源，通过自动化采集和 AI 分析生成每周商业热点与选题价值判断。",
+        "帮助 30 万+ 粉丝的自媒体博主搭建商业热点选题网站，通过自动化采集和 AI 分析生成每周热点与选题价值判断。",
       tags: ["商业信息", "AI 分析", "GitHub Actions"],
       demoUrl:
         "https://tomorrow140.github.io/xiaohu-business-hotspots/insights/weekly-hotspots.html?v=check-20260722",
