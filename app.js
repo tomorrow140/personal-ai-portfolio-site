@@ -34,8 +34,8 @@ function renderExperience(items) {
   const educationItems = items.filter((item) => item.kind === "education");
   const workItems = items.filter((item) => item.kind !== "education");
   const groups = [
-    { index: "01", label: "教育经历", items: educationItems },
-    { index: "02", label: "工作经历", kind: "work", items: workItems }
+    { label: "教育背景", items: educationItems },
+    { label: "工作经历", kind: "work", items: workItems }
   ].filter((group) => group.items.length);
 
   root.innerHTML = groups.map(resumeGroup).join("");
@@ -50,7 +50,6 @@ function resumeGroup(group) {
   return `
     <section class="resume-group" aria-label="${escapeAttribute(group.label)}">
       <div class="resume-group-label">
-        <span>${escapeHtml(group.index)}</span>
         <h3>${escapeHtml(group.label)}</h3>
       </div>
       <div class="resume-group-list">
@@ -116,13 +115,13 @@ function workRoleItem(item) {
 
 function resumeItem(item) {
   return `
-    <article class="timeline-item">
-      <div class="timeline-time">${escapeHtml(item.period)}</div>
-      <div>
+    <article class="timeline-item timeline-item--education">
+      <div class="timeline-main">
         <h3>${escapeHtml(item.organization)}</h3>
         <p class="timeline-role">${escapeHtml(item.title)}</p>
         ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
       </div>
+      <div class="timeline-time">${escapeHtml(item.period)}</div>
     </article>
   `;
 }

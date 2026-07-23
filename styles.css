@@ -110,9 +110,9 @@ main {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
   gap: 1.2rem;
-  min-height: 66vh;
+  min-height: auto;
   align-items: center;
-  padding: 4.5rem 0 3.5rem;
+  padding: 3.6rem 0 3.2rem;
 }
 
 .compact-hero {
@@ -255,12 +255,12 @@ h2 {
 }
 
 h1 {
-  max-width: 760px;
-  font-size: clamp(3rem, 6vw, 5.1rem);
+  max-width: 700px;
+  font-size: clamp(2.8rem, 5vw, 4.3rem);
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
 
 h3 {
@@ -347,16 +347,17 @@ h3 {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3.4rem 0;
   border-top: 1px solid var(--line);
 }
 
 .section-heading {
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .profile-grid {
   display: block;
+  border-top: 1px solid var(--ink);
 }
 
 .project-card,
@@ -369,24 +370,23 @@ h3 {
 
 .bio-block {
   display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: 2rem;
-  padding: 1.8rem 0 2.2rem;
-  border-top: 1px solid var(--ink);
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.35rem 0;
   border-bottom: 1px solid var(--line);
 }
 
 .bio-block h3 {
   font-family: "Songti SC", "STSong", Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.12rem;
 }
 
 .bio-block p {
   max-width: 800px;
   margin: 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .timeline {
@@ -395,31 +395,23 @@ h3 {
 
 .resume-group {
   display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr);
-  gap: 2rem;
-  padding: 2.4rem 0;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.35rem 0;
   border-bottom: 1px solid var(--line);
 }
 
 .resume-group-label {
-  padding-top: 0.1rem;
-}
-
-.resume-group-label span {
-  display: block;
-  margin-bottom: 0.45rem;
-  color: var(--accent-strong);
-  font-size: 0.75rem;
-  font-weight: 800;
+  padding-top: 0.05rem;
 }
 
 .resume-group-label h3 {
   font-family: "Songti SC", "STSong", Georgia, serif;
-  font-size: 1.35rem;
+  font-size: 1.12rem;
 }
 
 .resume-group-list {
-  border-top: 1px solid var(--ink);
+  min-width: 0;
 }
 
 .company-group {
@@ -461,6 +453,21 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
+.timeline-item--education {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.timeline-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 1rem;
+}
+
 .timeline-item:last-child {
   border-bottom: 0;
 }
@@ -477,6 +484,7 @@ h3 {
 }
 
 .timeline-item .timeline-role {
+  margin: 0;
   color: var(--ink);
   font-weight: 700;
 }
@@ -771,13 +779,13 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 3rem;
+    padding: 2.8rem 0;
   }
 
   .bio-block,
   .resume-group {
-    grid-template-columns: 7.5rem minmax(0, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 1.25rem;
   }
 }
 
@@ -791,7 +799,7 @@ h3 {
 
   h1 {
     max-width: 11ch;
-    font-size: clamp(2.65rem, 13vw, 3.6rem);
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
   }
 
   .bio-block,
@@ -802,7 +810,12 @@ h3 {
   }
 
   .resume-group {
-    padding: 1.8rem 0;
+    padding: 1.25rem 0;
+  }
+
+  .timeline-item--education {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
   }
 
   .company-heading h3 {
