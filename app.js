@@ -175,7 +175,7 @@ function projectCard(item) {
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
         ${renderProjectMetrics(item)}
-        ${renderInstallCommand(item)}
+        ${renderInstallCommands(item)}
         ${renderLinks(item)}
       </div>
     </article>
@@ -233,13 +233,27 @@ function renderProjectMedia(item) {
   `;
 }
 
-function renderInstallCommand(item) {
-  if (!item.installCommand) return "";
+function renderInstallCommands(item) {
+  const commands = item.installCommands?.length
+    ? item.installCommands
+    : item.installCommand
+      ? [{ label: "CLI 安装", command: item.installCommand }]
+      : [];
+
+  if (!commands.length) return "";
 
   return `
-    <div class="install-command" aria-label="CLI 安装命令">
-      <span>CLI 安装</span>
-      <code>${escapeHtml(item.installCommand)}</code>
+    <div class="install-commands" aria-label="安装 CLI">
+      ${commands
+        .map(
+          (item) => `
+            <div class="install-command">
+              <span>${escapeHtml(item.label)}</span>
+              <code>${escapeHtml(item.command)}</code>
+            </div>
+          `
+        )
+        .join("")}
     </div>
   `;
 }
@@ -263,7 +277,7 @@ function renderTags(tags) {
 function renderLinks(item) {
   const links = [
     item.demoUrl && { href: item.demoUrl, label: item.demoLabel || "Demo" },
-    item.sourceUrl && { href: item.sourceUrl, label: "Source" }
+    item.sourceUrl && { href: item.sourceUrl, label: "GitHub 仓库" }
   ].filter(Boolean);
 
   if (!links.length) {

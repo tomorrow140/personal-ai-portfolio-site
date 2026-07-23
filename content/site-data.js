@@ -58,13 +58,19 @@ window.SITE_DATA = {
     {
       title: "技术文章生图 Skill",
       status: "已发布",
-      type: "Codex Skill",
+      type: "Agent Skill",
       description:
-        "将技术文章、框架对比和 Agent / AI 概念转换为中文手绘解释图的通用 Prompt Pack，可安装为 Codex Skill。",
-      tags: ["信息图", "Prompt", "Agent"],
+        "将技术文章、框架对比和 Agent / AI 概念转换为中文手绘解释图的通用 Prompt Pack，可用于 Codex、Claude Code、OpenClaw 及其他支持自定义技能或提示词的 Agent。",
+      tags: ["信息图", "Prompt", "Agent 通用"],
       imageUrl: "assets/tech-article-infographic-example.png",
       imageAlt: "技术文章生图 Skill 生成的 Loop 工作机制中文手绘信息图",
-      installCommand: "./install.sh --target codex",
+      installCommands: [
+        { label: "Codex", command: "./install.sh --target codex" },
+        {
+          label: "通用 Agent",
+          command: "./install.sh --dest ~/agent-prompts/tech-article-infographic"
+        }
+      ],
       demoUrl: "",
       sourceUrl: "https://github.com/tomorrow140/tech-article-infographic-skill"
     },
