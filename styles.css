@@ -60,21 +60,23 @@ code {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  font-size: 0.92rem;
 }
 
-.brand-mark {
-  display: grid;
-  width: 2.35rem;
-  height: 2.35rem;
-  place-items: center;
-  border: 1px solid var(--ink);
-  border-radius: 8px;
-  background: var(--ink);
-  color: #fff;
-  font-size: 0.78rem;
+.brand-name {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.brand-separator,
+.brand-role {
+  color: var(--muted);
+}
+
+.brand-role {
+  font-weight: 650;
 }
 
 .nav {
@@ -253,8 +255,8 @@ h2 {
 }
 
 h1 {
-  max-width: 880px;
-  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  max-width: 760px;
+  font-size: clamp(3rem, 6vw, 5.1rem);
 }
 
 h2 {
@@ -788,7 +790,8 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.8rem, 18vw, 4.2rem);
+    max-width: 11ch;
+    font-size: clamp(2.65rem, 13vw, 3.6rem);
   }
 
   .bio-block,
