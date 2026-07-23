@@ -6,7 +6,7 @@ window.SITE_DATA = {
   summary: "9 年产品经验，近两年聚焦 AIGC 创意与 AI Chatbot 产品落地。",
   bio:
     "9 年产品经验，长期深耕本地商业、广告平台与商家经营场景。近两年从 0 到 1 负责 AIGC 创意生产和广告投放 AI Chatbot 落地，能够从业务判断、产品设计一路推进到规模化应用。",
-  lastUpdated: "2026-07-22",
+  lastUpdated: "2026-07-23",
   experience: [
     {
       period: "2013.09 - 2017.06",
@@ -72,9 +72,18 @@ window.SITE_DATA = {
       title: "Chrome 标签去重助手",
       status: "已上线",
       type: "Chrome Extension",
-      description: "用于发现并处理 Chrome 浏览器中的重复标签页。",
-      tags: ["标签管理"],
-      demoUrl: "",
+      description:
+        "自动识别并阻止重复标签页，同时支持不活跃标签清理、标签统计和常用网站分析。",
+      tags: ["标签管理", "效率工具"],
+      iconUrl: "assets/chrome-tab-deduplicator-icon.png",
+      iconAlt: "Chrome 标签去重助手插件图标",
+      metrics: [
+        { value: "700+", label: "累计用户" },
+        { value: "200+", label: "周活跃用户" }
+      ],
+      demoLabel: "Chrome 商店",
+      demoUrl:
+        "https://chromewebstore.google.com/detail/%E6%A0%87%E7%AD%BE%E5%8E%BB%E9%87%8D%E5%8A%A9%E6%89%8B/agfpdiijjijmjgfghlfljekcfpkjamgj",
       sourceUrl: ""
     },
     {

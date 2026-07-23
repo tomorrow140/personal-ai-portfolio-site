@@ -168,13 +168,52 @@ function projectCard(item) {
     <article class="${cardClass}">
       ${renderProjectMedia(item)}
       <div class="project-card-content">
-        <div class="card-meta">${renderTags(tags)}</div>
+        <div class="project-card-top">
+          ${renderProjectIcon(item)}
+          <div class="card-meta">${renderTags(tags)}</div>
+        </div>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description)}</p>
+        ${renderProjectMetrics(item)}
         ${renderInstallCommand(item)}
         ${renderLinks(item)}
       </div>
     </article>
+  `;
+}
+
+function renderProjectIcon(item) {
+  if (!item.iconUrl) return "";
+
+  return `
+    <span class="project-icon">
+      <img
+        src="${escapeAttribute(item.iconUrl)}"
+        alt="${escapeAttribute(item.iconAlt || `${item.title}图标`)}"
+        width="128"
+        height="128"
+        loading="lazy"
+      />
+    </span>
+  `;
+}
+
+function renderProjectMetrics(item) {
+  if (!item.metrics?.length) return "";
+
+  return `
+    <div class="project-metrics" aria-label="${escapeAttribute(item.title)}使用数据">
+      ${item.metrics
+        .map(
+          (metric) => `
+            <span class="project-metric">
+              <strong>${escapeHtml(metric.value)}</strong>
+              <span>${escapeHtml(metric.label)}</span>
+            </span>
+          `
+        )
+        .join("")}
+    </div>
   `;
 }
 
@@ -223,7 +262,7 @@ function renderTags(tags) {
 
 function renderLinks(item) {
   const links = [
-    item.demoUrl && { href: item.demoUrl, label: "Demo" },
+    item.demoUrl && { href: item.demoUrl, label: item.demoLabel || "Demo" },
     item.sourceUrl && { href: item.sourceUrl, label: "Source" }
   ].filter(Boolean);
 

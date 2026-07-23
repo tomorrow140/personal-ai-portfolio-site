@@ -524,6 +524,39 @@ h3 {
   padding: 1.15rem;
 }
 
+.project-card-top {
+  display: flex;
+  min-height: 3.75rem;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-top .card-meta {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.project-icon {
+  display: grid;
+  width: 3.75rem;
+  flex: 0 0 3.75rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid rgba(20, 36, 31, 0.12);
+  border-radius: 8px;
+  background: #f2f6f4;
+  box-shadow: 0 8px 18px rgba(20, 36, 31, 0.08);
+}
+
+.project-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .project-media {
   min-width: 0;
   margin: 0;
@@ -580,6 +613,33 @@ h3 {
   max-width: 760px;
   margin: 0.75rem 0 0;
   color: var(--muted);
+}
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.35rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.project-metric {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.project-metric strong {
+  color: var(--ink);
+  font-family: "Songti SC", "STSong", Georgia, serif;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.project-metric span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .install-command {
