@@ -1,11 +1,10 @@
 window.SITE_DATA = {
   siteTitle: "任思琳的 AI 实践",
   name: "任思琳",
-  role: "商业化 AI 产品负责人 / AI Builder",
+  role: "商业化 AI 产品经理 / AI Builder",
   eyebrow: "AI Native Product Portfolio",
-  summary: "9 年产品经验，近两年聚焦 AIGC 创意与 AI Chatbot 产品落地。",
-  bio:
-    "9 年大厂产品经验，长期深耕本地商业、广告平台与商家经营场景。近两年独立负责 AIGC 创意生产和广告投放 AI Chatbot 落地，能够从业务判断、产品设计一路推进到规模化应用。",
+  summary: "9 年产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
+  bio: "9 年产品经验（其中 7 年古典商业化 / B 端 / 增长产品，2 年 AI 产品）",
   lastUpdated: "2026-07-23",
   experience: [
     {
@@ -19,7 +18,7 @@ window.SITE_DATA = {
     {
       title: "飞书转公众号排版工具",
       status: "已发布",
-      type: "Web Tool",
+      type: "前端网页",
       description:
         "将飞书文档富文本转换为微信公众号后台稳定识别的内联样式 HTML，并提供实时预览与多套排版风格。",
       tags: ["内容排版", "飞书", "微信公众号"],
@@ -56,7 +55,7 @@ window.SITE_DATA = {
     {
       title: "Chrome 标签去重助手",
       status: "已上线",
-      type: "Chrome Extension",
+      type: "Chrome 插件",
       description:
         "自动识别并阻止重复标签页，同时支持不活跃标签清理、标签统计和常用网站分析。",
       tags: ["标签管理", "效率工具"],
@@ -84,7 +83,7 @@ window.SITE_DATA = {
     {
       title: "商业热点选题网站",
       status: "持续更新",
-      type: "Web App",
+      type: "信息检索网站",
       description:
         "帮助 30 万+ 粉丝的自媒体博主搭建商业热点选题网站，通过自动化采集和 AI 分析生成每周热点与选题价值判断。",
       tags: ["商业信息", "AI 分析", "GitHub Actions"],

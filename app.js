@@ -161,7 +161,7 @@ function emptyState(message) {
 }
 
 function projectCard(item, index) {
-  const tags = [item.status, item.type, ...(item.tags || [])].filter(Boolean);
+  const tags = [item.status, ...(item.tags || [])].filter(Boolean);
   const cardClasses = ["project-card"];
   if (item.imageUrl) cardClasses.push("project-card--featured");
   if (index === 0 && item.imageUrl) cardClasses.push("project-card--primary");
@@ -169,12 +169,16 @@ function projectCard(item, index) {
     <article class="${cardClasses.join(" ")}">
       ${renderProjectMedia(item)}
       <div class="project-card-content">
-        <div class="project-card-top">
-          ${renderProjectIcon(item)}
-          <div class="card-meta">${renderTags(tags)}</div>
+        <div class="project-identity">
+          <span class="project-index">${String(index + 1).padStart(2, "0")}</span>
+          <span class="project-type">${escapeHtml(item.type)}</span>
         </div>
-        <h3>${escapeHtml(item.title)}</h3>
+        <div class="project-title-row">
+          ${renderProjectIcon(item)}
+          <h3>${escapeHtml(item.title)}</h3>
+        </div>
         <p>${escapeHtml(item.description)}</p>
+        <div class="card-meta">${renderTags(tags)}</div>
         ${renderProjectMetrics(item)}
         ${renderInstallCommands(item)}
         ${renderLinks(item)}

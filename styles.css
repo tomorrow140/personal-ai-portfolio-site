@@ -108,7 +108,7 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 280px);
   gap: 1.2rem;
   min-height: auto;
   align-items: center;
@@ -255,8 +255,9 @@ h2 {
 }
 
 h1 {
-  max-width: 700px;
-  font-size: clamp(2.8rem, 5vw, 4.3rem);
+  max-width: none;
+  font-size: clamp(2.6rem, 4.3vw, 3.6rem);
+  white-space: nowrap;
 }
 
 h2 {
@@ -534,17 +535,37 @@ h3 {
   padding: 1.15rem;
 }
 
-.project-card-top {
+.project-identity {
+  display: flex;
+  min-height: 1.7rem;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.project-index {
+  padding-right: 0.65rem;
+  border-right: 1px solid rgba(13, 127, 88, 0.35);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.project-type {
+  letter-spacing: 0.04em;
+}
+
+.project-title-row {
   display: flex;
   min-height: 3.75rem;
   align-items: flex-start;
   gap: 0.85rem;
-  margin-bottom: 1rem;
 }
 
-.project-card-top .card-meta {
-  flex: 1;
-  margin-bottom: 0;
+.project-title-row h3 {
+  padding-top: 0.15rem;
 }
 
 .project-icon {
@@ -604,6 +625,10 @@ h3 {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 1rem;
+}
+
+.project-card-content > .card-meta {
+  margin: 1rem 0 0;
 }
 
 .pill {
@@ -785,6 +810,10 @@ h3 {
   .hero {
     min-height: auto;
     padding: 2.8rem 0;
+  }
+
+  h1 {
+    white-space: normal;
   }
 
   .bio-block,
