@@ -103,6 +103,7 @@ window.SITE_DATA = {
       imageAlt: "祝福星球微信小程序码",
       imageWidth: 656,
       imageHeight: 616,
+      mediaVariant: "compact",
       demoUrl: "",
       sourceUrl: ""
     },

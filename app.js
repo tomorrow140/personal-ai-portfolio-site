@@ -23,9 +23,28 @@ textFields.forEach((node) => {
 
 document.title = `${data.name || "个人网站"} | AI 探索与个人简介`;
 
+renderHeroEducation(data.experience || []);
 renderExperience(data.experience || []);
 renderProjects(data.projects || []);
 renderSkills(data.skills || []);
+
+function renderHeroEducation(items) {
+  const root = document.querySelector("#hero-education");
+  if (!root) return;
+
+  const education = items.find((item) => item.kind === "education");
+  if (!education) {
+    root.hidden = true;
+    return;
+  }
+
+  root.innerHTML = `
+    <span class="hero-education-label">教育背景</span>
+    <strong>${escapeHtml(education.organization)}</strong>
+    <span>${escapeHtml(education.title)}</span>
+    <span class="hero-education-period">${escapeHtml(education.period)}</span>
+  `;
+}
 
 function renderExperience(items) {
   const root = document.querySelector("#experience-list");
@@ -162,12 +181,11 @@ function emptyState(message) {
 
 function projectCard(item, index) {
   const tags = [item.status, ...(item.tags || [])].filter(Boolean);
-  const cardClasses = ["project-card"];
-  if (item.imageUrl) cardClasses.push("project-card--featured");
-  if (index === 0 && item.imageUrl) cardClasses.push("project-card--primary");
+  const cardClasses = ["project-card", "project-card--featured"];
+  if (item.mediaVariant === "compact") cardClasses.push("project-card--compact-media");
   return `
     <article class="${cardClasses.join(" ")}">
-      ${renderProjectMedia(item)}
+      ${renderProjectMedia(item, index)}
       <div class="project-card-content">
         <div class="project-identity">
           <div class="project-kind">
@@ -229,8 +247,20 @@ function renderProjectMetrics(item) {
   `;
 }
 
-function renderProjectMedia(item) {
-  if (!item.imageUrl) return "";
+function renderProjectMedia(item, index) {
+  if (!item.imageUrl) {
+    return `
+      <div class="project-media project-media--placeholder" aria-hidden="true">
+        <span class="project-visual-index">${String(index + 1).padStart(2, "0")}</span>
+        ${
+          item.iconUrl
+            ? `<img class="project-visual-icon" src="${escapeAttribute(item.iconUrl)}" alt="" width="128" height="128" loading="eager" />`
+            : ""
+        }
+        <strong>${escapeHtml(item.type)}</strong>
+      </div>
+    `;
+  }
 
   return `
     <figure class="project-media">
