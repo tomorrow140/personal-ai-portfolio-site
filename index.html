@@ -8,9 +8,10 @@
       content="任思琳的个人简介、教育背景与 AI 探索作品集。"
     />
     <title>个人网站 | AI 探索与个人简介</title>
-    <link rel="stylesheet" href="styles.css?v=20260723-natural-cards" />
+    <link rel="stylesheet" href="styles.css?v=20261002-motion" />
   </head>
-  <body>
+  <body class="portfolio">
+    <a class="skip-link" href="#projects">跳到作品集</a>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="回到首页">
         <span class="brand-name" data-field="name">任思琳</span>
@@ -46,6 +47,10 @@
           <p class="section-kicker">Projects</p>
           <h2 id="projects-title">AI 探索作品集</h2>
         </div>
+        <div class="project-toolbar" id="project-toolbar" hidden>
+          <div class="project-filters" role="group" aria-label="筛选作品"></div>
+          <p class="project-count" id="project-count" role="status" aria-live="polite"></p>
+        </div>
         <div class="card-grid" id="project-list"></div>
       </section>
 
@@ -56,7 +61,18 @@
       <span>Built as a small, editable AI portfolio.</span>
     </footer>
 
-    <script src="content/site-data.js?v=20260723-natural-cards"></script>
-    <script src="app.js?v=20260723-natural-cards"></script>
+    <dialog class="image-dialog" aria-labelledby="image-dialog-title">
+      <div class="image-dialog-panel">
+        <header class="image-dialog-header">
+          <h2 id="image-dialog-title">作品预览</h2>
+          <button class="dialog-close" type="button" aria-label="关闭图片预览" autofocus>关闭 <span aria-hidden="true">×</span></button>
+        </header>
+        <img class="image-dialog-image" alt="" />
+      </div>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="content/site-data.js?v=20261002-motion"></script>
+    <script src="app.js?v=20261002-motion"></script>
+    <script src="portfolio-ui.js?v=20261002-motion"></script>
   </body>
 </html>

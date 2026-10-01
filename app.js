@@ -253,6 +253,7 @@ function renderProjectMedia(item) {
 
   return `
     <figure class="project-media">
+      ${document.body.classList.contains("portfolio") ? `<button class="media-preview" type="button" aria-label="放大查看：${escapeAttribute(item.title)}">` : ""}
       <img
         src="${escapeAttribute(item.imageUrl)}"
         alt="${escapeAttribute(item.imageAlt || item.title)}"
@@ -260,6 +261,7 @@ function renderProjectMedia(item) {
         height="${item.imageHeight || 1024}"
         loading="eager"
       />
+      ${document.body.classList.contains("portfolio") ? `<span class="media-hint" aria-hidden="true">查看大图 ↗</span></button>` : ""}
     </figure>
   `;
 }
@@ -281,6 +283,7 @@ function renderInstallCommands(item) {
             <div class="install-command">
               <span>${escapeHtml(item.label)}</span>
               <code>${escapeHtml(item.command)}</code>
+              ${document.body.classList.contains("portfolio") ? `<button class="copy-command" type="button" aria-label="复制${escapeAttribute(item.label)}安装命令">复制</button>` : ""}
             </div>
           `
         )
